@@ -1,2 +1,2 @@
 # projeto-um
-primeiro projeto em Go
+site de jogo de dados
