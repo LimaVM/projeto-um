@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judth Leao REG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">
+        <span id="theme-icon" class="fas fa-sun"></span> 
+    </button>
+
+    <div class="container">
+        <h1>Judth Leao REG</h1>
+
+        <nav>
+            <a href="register.html">
+                <i class="fas fa-user-plus"></i> Registrar Funcionário 
+            </a>
+            <a href="export.html">
+                <i class="fas fa-file-export"></i> Exportar Presenças 
+            </a>
+        </nav>
+
+        <h2>Gestão de Presença</h2>
+        <div id="controle-presenca">
+            <label for="buscar-funcionario">Selecionar Funcionário:</label>
+            <select id="buscar-funcionario">
+                <option value="" disabled selected>Selecionar Funcionário</option>
+            </select>
+
+            <form id="form-registro-presenca">
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="Presente">Presente</option>
+                    <option value="Ausente">Ausente</option>
+                </select>
+
+                <div id="horarios">
+                    <label for="entrada_manha">Entrada Manhã:</label>
+                    <input type="time" id="entrada_manha" required>
+
+                    <label for="saida_manha">Saída Manhã:</label>
+                    <input type="time" id="saida_manha" required>
+
+                    <label for="entrada_tarde">Entrada Tarde:</label>
+                    <input type="time" id="entrada_tarde" required>
+
+                    <label for="saida_tarde">Saída Tarde:</label>
+                    <input type="time" id="saida_tarde" required>
+                </div>
+
+                <button type="submit">Registrar Presença</button>
+            </form>
+        </div>
+
+        <h2>Histórico de Presenças</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Entrada Manhã</th>
+                    <th>Saída Manhã</th>
+                    <th>Entrada Tarde</th>
+                    <th>Saída Tarde</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="registros">
+                <tr><td colspan="6">Nenhum registro encontrado.</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Saldo Extra Acumulado</h2>
+        <div id="saldo-extra">
+            R$ 0.00
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

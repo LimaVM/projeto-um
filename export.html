@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportar Presenças</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">
+        <span id="theme-icon" class="fas fa-sun"></span> 
+    </button>
+
+    <div class="container">
+        <h1>Exportar Presenças</h1>
+
+        <nav>
+            <a href="index.html">
+                <i class="fas fa-arrow-left"></i> Voltar 
+            </a>
+        </nav>
+
+        <div id="controle-exportacao">
+            <label for="buscar-funcionario">Selecionar Funcionário:</label>
+            <select id="buscar-funcionario">
+                <option value="" disabled selected>Selecionar Funcionário</option>
+            </select>
+
+            <h3>Exportar para Excel</h3>
+            <form id="form-exportar">
+                <label for="inicio">Data de Início:</label>
+                <input type="date" id="inicio">
+
+                <label for="fim">Data de Fim:</label>
+                <input type="date" id="fim">
+
+                <label for="todos-dias">
+                    <input type="checkbox" id="todos-dias"> Incluir todos os dias
+                </label>
+
+                <button type="submit" id="exportar">
+                    <i class="fas fa-file-download"></i> Exportar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
